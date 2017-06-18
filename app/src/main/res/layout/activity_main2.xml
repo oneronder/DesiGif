@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.phunsukwangdu.desigif.ui.Main2Activity">
+
+    <Button
+        android:id="@+id/btn_takepicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/take_picture"
+        android:textSize="@dimen/take_button_text_size"
+        android:typeface="serif"
+        android:background="@color/primary_dark"
+        android:textColor="@android:color/white"
+        android:padding="10dp"/>
+
+    <TextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Chronometer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/chronometer2"
+        android:textSize="16sp"
+        android:paddingLeft="40dp"
+        android:paddingBottom="10dp"
+        android:layout_alignTop="@+id/btn_takepicture"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+
+</RelativeLayout>

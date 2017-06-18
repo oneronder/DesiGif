@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_gallery_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+
+
+    android:orientation="vertical"
+    tools:context="com.phunsukwangdu.desigif.galleryhome.GalleryHomeActivity"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/gallery_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="?attr/colorBackgroundFloating">
+        <RelativeLayout
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            tools:background="?android:attr/statusBarColor">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:text="Gif Feed"
+                android:textColor="@android:color/white"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+           <!-- <ImageView
+                android:id="@+id/camera_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"/> -->
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:numColumns="1"
+        android:verticalSpacing="5dp"
+        android:horizontalSpacing="5dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        >
+    </GridView>
+
+        <LinearLayout
+        android:id="@+id/no_gif_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+    <TextView
+        android:id="@+id/no_gif_yet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="serif"
+        android:text="@string/no_gif_yet_text"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+        <Button
+            android:id="@+id/make_gif_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            android:text="@string/make_gif"
+            android:textSize="@dimen/make_gif_button_text_size"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:typeface="serif"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="14dp"
+            android:alwaysDrawnWithCache="false"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:clipChildren="false"
+            android:clickable="false"
+            android:layout_alignParentEnd="false"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:layout_centerHorizontal="false"
+            android:layout_alignParentBottom="true">
+
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+
+
+            <Button
+                android:id="@+id/home1"
+                android:layout_alignParentBottom="true"
+                android:background="@android:drawable/ic_menu_view"
+                android:elevation="@dimen/activity_vertical_margin"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <Button
+                android:id="@+id/camera1"
+                android:background="@android:drawable/ic_menu_camera"
+                android:elevation="11dp"
+                android:layout_alignBaseline="@+id/settng"
+                android:layout_alignBottom="@+id/settng"
+                android:layout_alignStart="@+id/textView"
+                android:layout_height="40dp"
+                android:layout_width="40dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+            <Button
+                android:id="@+id/settng1"
+                style="@android:style/Widget.Holo.Light.Button"
+                android:background="@android:drawable/ic_menu_preferences"
+                android:layout_alignParentBottom="true"
+                android:layout_alignEnd="@+id/textView"
+                android:elevation="11dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <Button
+                android:id="@+id/notify1"
+                android:background="@android:drawable/ic_menu_info_details"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:elevation="11dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
